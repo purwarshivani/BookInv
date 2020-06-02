@@ -10,7 +10,7 @@ $content = loadTemplate('../template/login_template.php', []);
 	$fetch=$login->find('user_name',$_POST['user_name']);
 	if($fetch->rowCount()>0){
 			$data=$fetch->fetch();
-			if($password==$data['psw']){
+			if(password_verify($password,$data['psw'])){
 $_SESSION['sessUserId']=$data['user_id']; 
 $_SESSION['logged_in']=true;
 $_SESSION['role']=$data['user_role'];

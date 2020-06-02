@@ -9,7 +9,7 @@
 				<input type="text" name="user_name" />
 				
 				<label>password</label>
-				<input type="text" name="psw"/>
+				<input type="password" name="psw"/>
 				
 				<input type="submit" name="save" value="SignUp" />
 			</div>

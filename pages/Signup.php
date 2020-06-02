@@ -7,7 +7,7 @@ if(isset($_POST['save'])){
 	$criteria = [
 		'user_name'=>$_POST['user_name'],
 		'user_role'=>2,
-		'psw'=> $_POST['psw']
+		'psw'=>password_hash($_POST['psw'],PASSWORD_DEFAULT)
 	];
 	$new->save($criteria) ;
 	echo "succesfully Created";

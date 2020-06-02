@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2020 at 12:57 PM
+-- Generation Time: Jun 02, 2020 at 02:45 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -53,7 +53,7 @@ INSERT INTO `book_details` (`book_id`, `book_name`, `author_name`, `quantity`) V
 CREATE TABLE `users` (
   `user_id` int(4) NOT NULL,
   `user_name` varchar(15) DEFAULT NULL,
-  `psw` varchar(8) NOT NULL,
+  `psw` varchar(255) NOT NULL,
   `user_role` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -62,9 +62,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `psw`, `user_role`) VALUES
-(1, 'shiv', 'shiv', 1),
-(3, 'shjh', 'djchjhsd', 2),
-(4, 'san', 'sanu', 2);
+(6, 'user', '$2y$10$LNeAMT.1ossstV7ZZEgOOe7CV85.OC8SXo0jfxlxQPbJpmmuQA/Gq', 2),
+(7, 'admin', '$2y$10$9Jrk.hvsKYFntcG3.JgzRu3ttxs7g.zQ1gEeV5SbqTAJSoNS89L3K', 1);
 
 --
 -- Indexes for dumped tables
@@ -96,7 +95,7 @@ ALTER TABLE `book_details`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
